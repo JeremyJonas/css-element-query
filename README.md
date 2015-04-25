@@ -28,15 +28,18 @@ elementQuery.init(jQuery);
 ## Exposed Methods
 ### init: `([sizzleMethod, readyState])`
 Initializes auto processing of StyleSheets on window load.
+
 If window is already loaded, it will be initialized immediately to allow for async scripts.
 
 ***@sizzleMethod*** {Function} *optional*
 >Sets the method used to perform sizzle (`jQuery.find`). If `null` then `window.Sizzle` or `window.JQuery` will be used if available.
 
 ***@readyState*** {String} *optional*
->Sets the `document.readyState` to check for immediate processing. Defaults to `complete`.
+>Sets the `document.readyState` to check for immediate processing. 
 
-*Usage:*
+>Defaults to `complete`.
+
+***Usage:***
 ```javascript
 elementQuery.init();
 
@@ -53,11 +56,13 @@ Process specific CSSStyleSheet instance. Exposes same internal method used to au
 
 ***@force*** {Boolean} *optional*
 >Force processing even if StyleSheet has been processed. Force will ignore all filters.
-Default `false`
+
+>Default `false`
 
 ***@refresh*** {Boolean} *optional*
 >Perform `refresh()` after processing.
-Default `false`
+
+>Default `false`
 
 ### refresh: `()`
 Refresh element query attribute mapping. Exposes the internal `refresh()` method.
@@ -67,6 +72,7 @@ Refresh element query attribute mapping. Exposes the internal `refresh()` method
 
 ### addStyleSheetFilter: `(callback)`
 Adds StyleSheet processing callback to enable filtering.
+
 ***@callback*** {Function} *required*
 >Function called before processing each StyleSheet.
 Callback signature:
@@ -79,14 +85,15 @@ function(styleSheet){
 	return null // pass to next filter
 }
 ```
-***@styleSheet*** {CSSStyleSheet}
-***@return*** Returns `true` to process styleSheet, `false` to not process styleSheet, and `null` to pass to next filter.
+>***@styleSheet*** {CSSStyleSheet}
+
+>***@return*** Returns `true` to process styleSheet, `false` to not process styleSheet, and `null` to pass to next filter.
 
 *Filter callbacks are ignored when `force` is true.*
 
-*Usage:* [coffescript](http://coffeescript.org/)
+***Usage:*** [coffescript](http://coffeescript.org/)
+
 Whitelist: *Only process a specific stylesheet*
-	*filter on StyleSheet innerText*
 ```coffee
 elementQuery = require "css-element-query"
 elementQuery.addStyleSheetFilter (styleSheet) ->
@@ -94,8 +101,7 @@ elementQuery.addStyleSheetFilter (styleSheet) ->
 elementQuery.init(jQuery)
 ```
 Blacklist: *Process all except a specific stylesheet*
-	*filter on StyleSheet href*
-```javascript
+```coffee
 elementQuery = require "css-element-query"
 elementQuery.addStyleSheetFilter (styleSheet) ->
 	if styleSheet.href?.indexOf("jquery") isnt -1
