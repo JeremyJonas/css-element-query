@@ -1,0 +1,26 @@
+{
+  "name": "css-element-query",
+  "version": "0.1.0",
+  "description": "A css element query modules based on elementQuery polyfill",
+  "main": "elementQuery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeremyJonas/elementQuery.git"
+  },
+  "keywords": [
+    "css",
+    "elementQuery",
+    "media query",
+    "element query",
+    "stylesheet"
+  ],
+  "author": "Jeremy Jonas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeremyJonas/elementQuery/issues"
+  },
+  "homepage": "https://github.com/JeremyJonas/elementQuery"
+}
