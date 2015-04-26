@@ -23,7 +23,7 @@ module.exports = (function(window, document, undefined){
 			if (document.styleSheets[0]) {
 					cssRules = (document.styleSheets[0].cssRules !== undefined) ? "cssRules" : "rules";
 			}
-	}
+	};
 
 	var addQueryDataValue = function (selector, type, pair, number, value) {
 
@@ -273,7 +273,7 @@ module.exports = (function(window, document, undefined){
 			}
 
 			refresh();
-	}
+	};
 
 	var refresh = function () {
 
@@ -330,7 +330,7 @@ module.exports = (function(window, document, undefined){
 					document.documentElement.className = " " + className;
 					document.documentElement.className = className;
 			}
-	}
+	};
 
 	// Expose some public functions
 	var elementQuery = function (arg1, arg2) {
