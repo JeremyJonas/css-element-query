@@ -25,6 +25,39 @@ var elementQuery = require("css-element-query");
 elementQuery.init(jQuery);
 ```
 
+## CSS Syntax
+This rule queries itself for a **single** condition:
+```css
+header[min-width~="500px"] {
+	background-color: #eee;
+}
+```
+
+This rule queries itself for **multiple** conditions:
+```css
+header[min-width~="500px"][max-width~="800px"] {
+	background-color: #eee;
+}
+```
+
+This rule queries a **parent** for a condition:
+```css
+header[min-width~="31.250em"] nav {
+	clear: both;
+}
+```
+
+This rule queries **itself** and a **parent** for conditions:
+```css
+header[min-width~="31.250em"] nav[min-height~="1em"] {
+	color: #333;
+}
+```
+
+### Query types
+The following query types are supported: `min-width`, `max-width`, `min-height`, `max-height`.
+
+
 ## Exposed Methods
 ### init: `([sizzleMethod, readyState])`
 Initializes auto processing of StyleSheets on window load.
@@ -35,7 +68,7 @@ If window is already loaded, it will be initialized immediately to allow for asy
 >Sets the method used to perform sizzle (`jQuery.find`). If `null` then `window.Sizzle` or `window.JQuery` will be used if available.
 
 ***@readyState*** {String} *optional*
->Sets the `document.readyState` to check for immediate processing. 
+>Sets the `document.readyState` to check for immediate processing.
 
 >Defaults to `complete`.
 
@@ -111,40 +144,7 @@ elementQuery.addStyleSheetFilter (styleSheet) ->
 elementQuery.init(jQuery)
 ```
 
-## [CSS Syntax](https://github.com/tysonmatanich/elementQuery#syntax)
-
-This rule queries itself for a **single** condition:
-```css
-header[min-width~="500px"] {
-	background-color: #eee;
-}
-```
-
-This rule queries itself for **multiple** conditions:
-```css
-header[min-width~="500px"][max-width~="800px"] {
-	background-color: #eee;
-}
-```
-
-This rule queries a **parent** for a condition:
-```css
-header[min-width~="31.250em"] nav {
-	clear: both;
-}
-```
-
-This rule queries **itself** and a **parent** for conditions:
-```css
-header[min-width~="31.250em"] nav[min-height~="1em"] {
-	color: #333;
-}
-```
-
-### [Query types](https://github.com/tysonmatanich/elementQuery#query-types)
-The following query types are supported: `min-width`, `max-width`, `min-height`, `max-height`.
-
-## [Selector registration](https://github.com/tysonmatanich/elementQuery#selector-registration)
+## Selector registration
 
 The **master branch** of elementQuery will parse your style sheets, however if you have cross-domain style sheets you will have to manualy register your selectors. The **prod branch** requires the selector information to be declared in JavaScript, which avoids the cross-domain file issue and the time required to parse the style sheets.
 
