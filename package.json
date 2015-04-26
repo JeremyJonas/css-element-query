@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JeremyJonas/elementQuery.git"
+    "url": "https://github.com/JeremyJonas/css-element-query.git"
   },
   "keywords": [
     "css",
@@ -20,7 +20,7 @@
   "author": "Jeremy Jonas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JeremyJonas/elementQuery/issues"
+    "url": "https://github.com/JeremyJonas/css-element-query/issues"
   },
-  "homepage": "https://github.com/JeremyJonas/elementQuery"
+  "homepage": "https://github.com/JeremyJonas/css-element-query"
 }
