@@ -6,7 +6,7 @@ A **css element query** module based on [elementQuery polyfill](https://github.c
 
 Node module wrapper to expose [elementQuery](https://github.com/tysonmatanich/elementQuery) methods and functionality.
 
-Goal is to expose element query library (not re-invent) and allow targeting better targeting of styles for large scale projects. To allow specifying which stylesheets to apply via filter callbacks, as to minimize the impact of add to an existing enterprise scale site.
+Goal is to expose element query library (not re-invent) and allow better targeting of styles for large scale projects. To allow specifying which stylesheets to apply via filter callbacks, as to minimize the impact of add to an existing enterprise scale site.
 
 Original work by [Tyson Matanich](https://github.com/tysonmatanich)
 
