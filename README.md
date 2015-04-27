@@ -6,6 +6,8 @@ A **css element query** module based on [elementQuery polyfill](https://github.c
 
 Node module wrapper to expose [elementQuery](https://github.com/tysonmatanich/elementQuery) methods and functionality.
 
+Goal is to expose element query library (not re-invent) and allow targeting better targeting of styles for large scale projects. To allow specifying which stylesheets to apply via filter callbacks, as to minimize the impact of add to an existing enterprise scale site.
+
 Original work by [Tyson Matanich](https://github.com/tysonmatanich)
 
 **Article:** http://coding.smashingmagazine.com/2013/06/25/media-queries-are-not-the-answer-element-query-polyfill/
@@ -173,3 +175,11 @@ Either as global or passed in during `init(sizzleMethod)`.
 ## [Support](https://github.com/tysonmatanich/elementQuery#support)
 
 `[min-width~='10px']` selectors are not supported in IE6.
+
+## Next Steps
+Look into and compare.
+* https://github.com/marcj/css-element-queries which looks more polished and tested
+** Testing for above http://marcj.github.io/css-element-queries/
+* http://responsiveimagescg.github.io/eq-usecases/
+* http://hugogiraudel.com/2014/04/22/why-element-queries-matter/
+* https://github.com/Snugug/eq.js
