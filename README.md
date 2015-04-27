@@ -1,4 +1,6 @@
-﻿# Css ElementQuery
+# Css ElementQuery
+
+> THIS PROJECT IS UNDERDEVELOPMENT AND NOT TESTED
 
 A **css element query** module based on [elementQuery polyfill](https://github.com/tysonmatanich/elementQuery).
 
